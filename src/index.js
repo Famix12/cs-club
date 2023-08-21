@@ -8,6 +8,8 @@ import Footer from "./Footer";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Events from './pages/events'
+import Team from './pages/team'
+import NotFound from "./pages/404";
 
 import "./index.css";
 
@@ -20,6 +22,10 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/team" element={<Team />} />
+
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
