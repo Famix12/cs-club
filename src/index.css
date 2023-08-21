@@ -6,6 +6,7 @@
 :root {
   --main-text: #f7f7f7;
   --sec-text: #82c8f7;
+  --sec-background: #053e64;
   --footer: #10224b;
 
 }
@@ -231,34 +232,37 @@ main {
   align-items: center;
 }
 
-.events-board{
+.events-board {
   background-color: var(--footer);
   border-radius: 1rem;
   width: fit-content;
   padding: 0;
   /* height: 50vh; */
 }
+
 /* Eventes */
 
-.events-sec{
+.events-sec {
   /* display: flex;
   flex-direction: row; 
   width: max-content;
   row-gap: 10rem !important;
-  rem; */ 
+  rem; */
   color: var(--main-text);
   margin-bottom: 5vh;
 }
-.events-side{
+
+.events-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 10vh;
 }
-#justify-tab-example-tab-done, 
-#justify-tab-example-tab-coming{
-  background: var(--footer) ;
+
+#justify-tab-example-tab-done,
+#justify-tab-example-tab-coming {
+  background: var(--footer);
   color: var(--sec-text);
   border: none;
   /* border-bottom: 1px #fff; */
@@ -266,25 +270,26 @@ main {
   margin: 0;
 }
 
-#justify-tab-example-tab-done:hover, 
-#justify-tab-example-tab-coming:hover{
- background: #0d1b3d;
+#justify-tab-example-tab-done:hover,
+#justify-tab-example-tab-coming:hover {
+  background: #0d1b3d;
 }
 
-#justify-tab-example-tab-done:active, 
-#justify-tab-example-tab-coming:active{
- background: #0d1b3d;
+#justify-tab-example-tab-done:active,
+#justify-tab-example-tab-coming:active {
+  background: #0d1b3d;
 }
 
-.nav-tabs{
+.nav-tabs {
   border: none;
 }
-.events-header{
+
+.events-header {
   font-size: 6vh;
   font-weight: 700;
 }
 
-.events-img{
+.events-img {
   height: fit-content;
   width: 50vh;
   /* margin: 0 auto; */
@@ -295,11 +300,16 @@ main {
 /* Breackpoints */
 
 @media (max-width: 767px) {
+  
+  .team-memberInfo> * {
+    white-space: wrap !important;
+  }
+
   .main-clubName>h1 {
     /* margin-bottom: -1rem; */
     font-size: 4vh;
+  
     /* background: none ; */
-
   }
 
   .main-clubName>h5 {
@@ -334,9 +344,58 @@ main {
     color: var(--main-text);
     background: none;
     font-size: 4vh;
-
   }
+
 }
+
+
+
+/* Team  */
+.team-memberConainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  /* min-height: 100vh; */
+}
+
+.team-memberCard {
+  color: var(--main-text);
+  /* display: flex; */
+  /* width: fit-content;
+  height: fit-content; */
+  min-width: 50vh;
+  margin: 2.5vh;
+}
+
+.team-memberInfo {
+  display: flex;
+  justify-content: center;
+  text-align: end;
+  flex-direction: column;
+}
+
+.team-memberInfo>h4 {
+  color: var(--sec-text);
+  font-weight: 300;
+}
+
+
+.team-memberInfo>h2 {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Scrollbar */
 

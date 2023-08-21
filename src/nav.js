@@ -40,9 +40,9 @@ function NavbarComponent() {
                 <Link className="nav-dropdownLink" to={"/team"}>فريق إدارة النادي</Link>
               </NavDropdown.Item>
 
-              <NavDropdown.Item id="drop-item">
+              {/* <NavDropdown.Item id="drop-item">
                 <Link className="nav-dropdownLink" to={"/members"}>أعضاء النادي</Link>
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
 
             </NavDropdown>
 
