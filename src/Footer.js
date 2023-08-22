@@ -21,7 +21,6 @@ function Footer() {
     >
       <Container>
         <Row>
-          
           <Col
             md={4}
             style={{
@@ -38,28 +37,77 @@ function Footer() {
               style={{ background: "var(--footer)" }}
             />
           </Col>
-          
+
           <Col md={4} style={{ background: "var(--footer)" }}>
-            <h2 style={{ background: "var(--footer)", direction : "rtl"}}>تواصل معنا</h2>
-            
-            <Form className="contact-form" method="POST"  netlify>
+            <h2 style={{ background: "var(--footer)", direction: "rtl" }}>
+              تواصل معنا
+            </h2>
+            {/*             
+            <form className="contact-form" name="contact" method="POST"  netlify action="/">
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="البريد الإلكتروني" required/>
+                <Form.Control type="email" name="email" placeholder="البريد الإلكتروني" required/>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Control type="text" placeholder="الأسم" required/>
+                <Form.Control type="text" name="name" placeholder="الأسم" required/>
+
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Group className="mb-3" controlId="formBasicTextarea">
+              <Form.Control as="textarea" rows={4} name="textArea"  placeholder="مرحبا أنا 👋 ..." required/>
+
               </Form.Group>
-              <Form.Control as="textarea" rows={4}  placeholder="مرحبا أنا 👋 ..." required/>
+
+              <input type="hidden" name="form-name" value="contact"/>
 
               <Button variant="primary" type="submit">
                 إرسال
               </Button>
-            </Form>
+            </form> */}
+
+            <form
+              name="contact"
+              className="contact-form"
+              method="post"
+              data-netlify="true"
+              onSubmit="submit"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="البريد الإلكتروني"
+                  // required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Control
+                  type="text"
+                  name="name"
+                  placeholder="الأسم"
+                  // required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicTextarea">
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  name="textArea"
+                  placeholder="مرحبا أنا 👋 ..."
+                  // required
+                />
+              </Form.Group>
+            
+              <Button type="submit">إرسال</Button>
+
+            </form>
           </Col>
+
+
           <Col md={4} style={{ background: "var(--footer)" }}>
             <h2 style={{ background: "var(--footer)", direction: "rtl" }}>
               روابط قد تهمك
@@ -104,7 +152,6 @@ function Footer() {
               </li>
             </ul>
           </Col>
-
         </Row>
         <Row style={{ background: "var(--footer)" }}>
           <hr />
