@@ -387,9 +387,19 @@ main {
 }
 
 
+/* footer form */
 
 
+.contact-form{
+  direction: rtl;
+  padding: 10px;
+  background: none;
 
+}
+
+.contact-form >  .btn{
+  margin-top: 10px;
+}
 
 
 

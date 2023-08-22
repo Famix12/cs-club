@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { GoMail } from "react-icons/go";
 import Illustration from "./assets/undraw_reminders_re_gtyb.svg";
 
@@ -21,21 +21,44 @@ function Footer() {
     >
       <Container>
         <Row>
+          
+          <Col
+            md={4}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "end",
+              background: "var(--footer)",
+            }}
+          >
+            <img
+              src={Illustration}
+              alt="Illustration"
+              height={"200vh"}
+              style={{ background: "var(--footer)" }}
+            />
+          </Col>
+          
           <Col md={4} style={{ background: "var(--footer)" }}>
-            <h2 style={{ background: "var(--footer)" }}>تواصل معنا</h2>
-            <p style={{ background: "var(--footer)" }}>
-              <a
-                href="mailto:contact@example.com"
-                style={{
-                  background: "var(--footer)",
-                  textDecoration: "none",
-                  color: "var(--sec-text)",
-                }}
-              >
-                <GoMail style={{ background: "var(--footer)" }} />{" "}
-                contact@example.com
-              </a>
-            </p>
+            <h2 style={{ background: "var(--footer)", direction : "rtl"}}>تواصل معنا</h2>
+            
+            <Form className="contact-form" method="POST"  netlify>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="البريد الإلكتروني" required/>
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Control type="text" placeholder="الأسم" required/>
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              </Form.Group>
+              <Form.Control as="textarea" rows={4}  placeholder="مرحبا أنا 👋 ..." required/>
+
+              <Button variant="primary" type="submit">
+                إرسال
+              </Button>
+            </Form>
           </Col>
           <Col md={4} style={{ background: "var(--footer)" }}>
             <h2 style={{ background: "var(--footer)", direction: "rtl" }}>
@@ -81,21 +104,7 @@ function Footer() {
               </li>
             </ul>
           </Col>
-          <Col
-            md={4}
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              background: "var(--footer)",
-            }}
-          >
-            <img
-              src={Illustration}
-              alt="Illustration"
-              height={"200vh"}
-              style={{ background: "var(--footer)" }}
-            />
-          </Col>
+
         </Row>
         <Row style={{ background: "var(--footer)" }}>
           <hr />
